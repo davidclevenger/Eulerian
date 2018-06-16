@@ -1,0 +1,18 @@
+x = int(input('Seeking the greatest common prime factor of?'))
+
+def is_prime(num):
+    for x in range(2,num):
+        if num % x == 0:
+            return False
+    return True
+
+
+i = 2
+while i < x:
+    if (x % i == 0):
+        num = x / i
+        if is_prime(num):
+            ans = num
+            print ans
+    else:
+        i += i
