@@ -1,16 +1,16 @@
 #include <stdio.h>
 
 //protoypes
-int collatz(int);
+unsigned int collatz(unsigned int);
 
 /*
 	returns the iterations until '1' is hit, inclusive.
  */
-int collatz(int x)
+unsigned int collatz(unsigned int x)
 {
 	printf("Testing %d: ", x);
 
-	int count = 1; //to count the number we start with
+	unsigned int count = 1; //to count the number we start with
 
 	while(x != 1)
 	{
@@ -23,6 +23,7 @@ int collatz(int x)
 		{
 			x = x / 2; //same as dividing by two
 		}
+		count++;
 	}
 
 	if(x == 1)
@@ -31,13 +32,12 @@ int collatz(int x)
 		return count;
 	}
 
-	count++;
 }
 
 
 int main()
 {
-	int result, max = -1, maxNum, i;
+	unsigned int result, max = 0, maxNum, i;
 
 	for(i = 2; i < 1000000; i++) //test all the numbers up to, but not including 1 million
 	{
