@@ -8,8 +8,6 @@ unsigned int collatz(unsigned int);
  */
 unsigned int collatz(unsigned int x)
 {
-	printf("Testing %d: ", x);
-
 	unsigned int count = 1; //to count the number we start with
 
 	while(x != 1)
@@ -26,12 +24,7 @@ unsigned int collatz(unsigned int x)
 		count++;
 	}
 
-	if(x == 1)
-	{
-		printf("%d steps\n", count);
-		return count;
-	}
-
+	return count;
 }
 
 
