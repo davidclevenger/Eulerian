@@ -16,3 +16,6 @@ while i < x:
             print ans
     else:
         i += i
+
+
+#does not work
