@@ -1,0 +1,34 @@
+"""
+
+Problem: find pythagorean triplet such that a+b+c=target (in this case 1000)
+
+"""
+import time
+
+target = int(raw_input("What is your target?:"))
+
+start = time.time()
+
+a = range(1,target)
+b = range(1,target)
+c = 0
+i = 0
+j = 0
+k=0
+l=0
+
+while (k==target and l==0) == False:
+    c = target -a[i] -b[j]
+    k = a[i] + b[j] + c
+    l = (a[i] ** 2) + (b[j] ** 2) - (c ** 2)
+    j += 1
+    if j == target-1:
+        j = 1
+        i += 1
+
+print "a = " + str(a[i])
+print "b = " + str(b[j-1])
+print "c = " + str(c)
+print "The solution to Euler Problem 9 is:" + str(a[i]*b[j-1]*c)
+end = time.time()
+print "Solution found in " + str(end - start) +" seconds"
